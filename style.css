@@ -6,6 +6,7 @@
     --accent: #58a6ff;
     --accent-green: #3fb950;
     --accent-orange: #f0883e;
+    --accent-purple: #bc8cff;
     --border: #30363d;
     --radius: 8px;
 }
@@ -19,6 +20,7 @@ body {
     line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0; width: 100%;
@@ -54,6 +56,7 @@ body {
 
 .nav-links a:hover { color: var(--text); }
 
+/* Sections */
 section { padding: 5rem 2rem; }
 
 .container {
@@ -77,6 +80,7 @@ section { padding: 5rem 2rem; }
     background: var(--border);
 }
 
+/* Hero */
 #hero {
     min-height: 100vh;
     display: flex;
@@ -141,6 +145,7 @@ section { padding: 5rem 2rem; }
     color: var(--text);
 }
 
+/* About */
 .about-content {
     max-width: 680px;
     display: flex;
@@ -151,6 +156,7 @@ section { padding: 5rem 2rem; }
     line-height: 1.8;
 }
 
+/* Skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -181,6 +187,7 @@ section { padding: 5rem 2rem; }
     color: var(--text);
 }
 
+/* Projects */
 .projects-grid {
     display: flex;
     flex-direction: column;
@@ -303,6 +310,49 @@ section { padding: 5rem 2rem; }
     font-size: 0.775rem;
 }
 
+/* Activities */
+.activities-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.activities-group-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.activity-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.activity-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+}
+
+.activity-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    white-space: nowrap;
+    min-width: 90px;
+    flex-shrink: 0;
+}
+
+.activity-name {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Contact */
 .contact-content {
     display: flex;
     flex-direction: column;
@@ -331,6 +381,7 @@ section { padding: 5rem 2rem; }
     flex-shrink: 0;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -339,9 +390,11 @@ footer {
     border-top: 1px solid var(--border);
 }
 
+/* Responsive */
 @media (max-width: 640px) {
     .nav-links { gap: 1.25rem; }
     section { padding: 4rem 1.25rem; }
     .hero-buttons { flex-direction: column; width: fit-content; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
+    .activities-layout { grid-template-columns: 1fr; gap: 2rem; }
 }
