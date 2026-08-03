@@ -4,48 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>윤찬혁 | Backend Developer</title>
+    <meta name="description" content="코드와 그 코드가 동작하는 운영 환경까지 함께 이해하는 백엔드 개발자 윤찬혁의 포트폴리오.">
+    <meta property="og:title" content="윤찬혁 | Backend Developer">
+    <meta property="og:description" content="측정한 뒤에 도입한다 — 실측 근거로 설계를 설명하는 백엔드 개발자.">
+    <meta property="og:type" content="website">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <nav class="navbar">
-        <div class="nav-logo">YCH</div>
+        <a href="#hero" class="nav-logo">YCH</a>
         <ul class="nav-links">
             <li><a href="#about">소개</a></li>
-            <li><a href="#skills">기술</a></li>
             <li><a href="#projects">프로젝트</a></li>
+            <li><a href="#skills">기술</a></li>
             <li><a href="#activities">활동</a></li>
             <li><a href="#contact">연락처</a></li>
         </ul>
     </nav>
 
-    <section id="hero">
-        <div class="hero-content">
-            <p class="hero-greeting">안녕하세요,</p>
-            <h1>윤찬혁입니다.</h1>
-            <p class="hero-subtitle">코드와 그 코드가 동작하는 운영 환경까지 함께 이해하는<br><span class="highlight">백엔드 개발자</span>를 지향합니다.</p>
+    <header id="hero">
+        <div class="container hero-inner">
+            <p class="hero-eyebrow">Backend Developer</p>
+            <h1>윤찬혁</h1>
+            <p class="hero-subtitle">
+                코드와 그 코드가 동작하는 운영 환경까지 함께 이해하는 백엔드 개발자를 지향합니다.<br>
+                <span class="highlight">기술은 필요를 겪은 뒤에 넣고, 주장은 실측으로만 합니다.</span>
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-label">대시보드 조회 p50</span>
+                    <span class="stat-value"><s>22.7s</s><i>→</i><em>412ms</em></span>
+                    <span class="stat-note">coldchain · 5,000 트래커 부하</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">예측 오탐률</span>
+                    <span class="stat-value"><s>0.68</s><i>→</i><em>0.04</em></span>
+                    <span class="stat-note">coldchain · 짝지은 모델 벤치</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">스미싱 탐지 F1</span>
+                    <span class="stat-value"><em>0.93</em></span>
+                    <span class="stat-note">Fremen · 전체 파이프라인</span>
+                </div>
+            </div>
+
             <div class="hero-buttons">
                 <a href="#projects" class="btn-primary">프로젝트 보기</a>
-                <a href="https://github.com/younchanhyeok" class="btn-secondary" target="_blank">GitHub</a>
+                <a href="https://github.com/younchanhyeok" class="btn-secondary" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:gabi960025@gmail.com" class="btn-secondary">이메일</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section id="about" class="reveal">
+        <div class="container">
+            <h2 class="section-title"><span class="section-index">01</span>소개</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p>동국대학교 정보통신공학과에서 백엔드 개발을 공부하고 있습니다. Spring Boot 기반 API 서버 개발부터 Docker, Kubernetes를 활용한 클라우드 인프라 구성까지, 코드가 작성되는 순간부터 운영 환경에서 동작하는 순간까지의 전반에 관심을 가지고 있습니다.</p>
+                    <p>기술은 필요를 겪은 뒤에 넣는다는 원칙을 지킵니다. 콜드체인 관제 시스템에서는 5,000대 부하로 병목을 직접 확인한 뒤에야 Kafka와 TimescaleDB로 전환했고, 예측 모델도 "정확하다"고 주장하는 대신 통제된 벤치로 트레이드오프를 측정해 기본값을 정했습니다.</p>
+                    <p>한 번 시작한 일은 어중간하게 끝내지 않고 더 나은 형태로 다듬어가는 태도를 중요하게 생각합니다.</p>
+                </div>
+                <aside class="about-facts">
+                    <div class="fact">
+                        <span class="fact-label">전공</span>
+                        <span class="fact-value">동국대학교 정보통신공학과</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-label">관심 영역</span>
+                        <span class="fact-value">분산 데이터 파이프라인 · 관측 가능성 · 인프라 자동화</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-label">작업 방식</span>
+                        <span class="fact-value">병목은 측정하고, 설계 판단은 근거를 남긴다</span>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
 
-    <section id="about">
+    <section id="projects">
         <div class="container">
-            <h2 class="section-title">소개</h2>
-            <div class="about-content">
-                <p>동국대학교 정보통신공학과에서 백엔드 개발을 공부하고 있습니다.</p>
-                <p>Spring Boot 기반 API 서버 개발부터 Docker, Kubernetes를 활용한 클라우드 인프라 구성까지, 코드가 작성되는 순간부터 운영 환경에서 동작하는 순간까지의 전반에 관심을 가지고 있습니다.</p>
-                <p>기술은 필요를 겪은 뒤에 넣는다는 원칙을 지킵니다. 콜드체인 관제 시스템에서는 5,000대 부하로 병목을 직접 확인한 뒤에야 Kafka와 TimescaleDB로 전환했고, 예측 모델도 "정확하다"고 주장하는 대신 통제된 벤치로 트레이드오프를 측정해 기본값을 정했습니다.</p>
-                <p>한 번 시작한 일은 어중간하게 끝내지 않고 더 나은 형태로 다듬어가는 태도를 중요하게 생각합니다.</p>
-            </div>
+            <h2 class="section-title reveal"><span class="section-index">02</span>프로젝트</h2>
+
+            <article class="project featured reveal">
+                <div class="project-meta">
+                    <span class="project-badge personal">개인 프로젝트</span>
+                    <p class="project-period">2026.07</p>
+                    <p class="project-role">설계·개발 전담</p>
+                    <div class="project-tags">
+                        <span>Spring Boot</span><span>Java 17</span><span>Kafka</span><span>TimescaleDB</span><span>PostGIS</span><span>Redis</span><span>FastAPI</span><span>React</span>
+                    </div>
+                    <a href="https://github.com/younchanhyeok/coldchain" target="_blank" rel="noopener" class="project-link">GitHub 저장소 →</a>
+                </div>
+
+                <div class="project-body">
+                    <h3>coldchain</h3>
+                    <p class="project-tagline">콜드체인 IoT 관제·온도 이탈 예측 시스템</p>
+                    <p class="project-desc">임계값을 넘은 뒤 알리는 관제가 아니라, 넘기 전에 경고하는 시스템. 트래커의 온도·위치를 실시간 수집·이상탐지하고, 추세로부터 이탈 시각을 예측해 사전 경고한다. 예측이 무의미해지는 급변에는 예측을 즉시 무효화하고 확정 알림으로 전환하는 안전한 실패 설계.</p>
+
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-label">대시보드 조회 p50</span>
+                            <span class="metric-value"><s>22.7s</s><i>→</i><em>412ms</em></span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">수집 p99</span>
+                            <span class="metric-value"><s>462ms</s><i>→</i><em>90ms</em></span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">예측 오탐률</span>
+                            <span class="metric-value"><s>0.68</s><i>→</i><em>0.04</em></span>
+                        </div>
+                    </div>
+
+                    <ul class="project-points">
+                        <li>5,000 트래커·초당 1,000건 부하로 병목을 실측한 뒤에야 Kafka·TimescaleDB 도입 — 값싼 최적화부터 단계별로 측정해 before/after를 수치로 남김</li>
+                        <li>예측 모델 2종(선형회귀 / 뉴턴 냉각 물리 모델)을 같은 시드로 짝지어 벤치 — 우위가 아닌 트레이드오프로 규명하고 근거를 남겨 기본값 선택</li>
+                        <li>화주(JWT)·수령기관(매직링크)·관리자(어드민 키) 역할별 인가 분리, 스코프 위반은 403이 아닌 404 존재 은닉으로 Testcontainers 통합 테스트에서 증명</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="project reveal">
+                <div class="project-meta">
+                    <span class="project-badge team">팀 프로젝트</span>
+                    <p class="project-period">2026.03 – 2026.06</p>
+                    <p class="project-role">DGU-CAP · 백엔드 개발</p>
+                    <div class="project-tags">
+                        <span>Spring Boot</span><span>Java 17</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>AWS EKS</span><span>Terraform</span>
+                    </div>
+                    <a href="https://github.com/DGU-CAP" target="_blank" rel="noopener" class="project-link">GitHub 저장소 →</a>
+                </div>
+
+                <div class="project-body">
+                    <h3>AI 기반 K8s 모니터링 플랫폼</h3>
+                    <p class="project-tagline">이상 탐지부터 티켓 자동 생성까지</p>
+                    <p class="project-desc">Kubernetes 클러스터의 메트릭/로그/이벤트를 실시간 수집하고, AI 이상 탐지 결과를 바탕으로 티켓을 자동 생성하는 SaaS형 모니터링 플랫폼.</p>
+                    <ul class="project-points">
+                        <li>Prometheus/Loki 연동으로 30초 주기 메트릭 수집 및 룰 기반 이상탐지 구현</li>
+                        <li>이상 감지 시 FastAPI AI 서버 분석 결과로 티켓 자동생성 + SSE 실시간 알림</li>
+                        <li>Terraform으로 AWS EKS 인프라 구성, GitHub Actions CI/CD 파이프라인 운영</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="project reveal">
+                <div class="project-meta">
+                    <span class="project-badge cap">캡스톤</span>
+                    <p class="project-period">2025.09 – 2025.12</p>
+                    <p class="project-role">지산학 캡스톤디자인2 · 3인 팀 · 백엔드</p>
+                    <div class="project-tags">
+                        <span>Spring Boot</span><span>Java 17</span><span>MySQL</span><span>JPA</span>
+                    </div>
+                    <a href="https://github.com/CSID-DGU/2025-2-DES4015-Fremen-02" target="_blank" rel="noopener" class="project-link">GitHub 저장소 →</a>
+                </div>
+
+                <div class="project-body">
+                    <h3>Fremen</h3>
+                    <p class="project-tagline">LLM 기반 스미싱 탐지·차단 서비스</p>
+                    <p class="project-desc">On-Device AI로 변형 키워드를 복원하고, KoBERT로 7개 카테고리 분류 후 RAG 기반으로 위험 근거를 자연어로 설명하는 Android 스미싱 탐지 서비스.</p>
+                    <ul class="project-points">
+                        <li>Spring Boot API Gateway 구현으로 Android 앱 ↔ FastAPI AI 서버 통신 연결</li>
+                        <li>KoBERT + RAG 파이프라인 연동, 전체 파이프라인 F1-score 0.93 달성</li>
+                        <li>Git-flow 전략 기반 협업 및 프로젝트 문서 전체 통합 관리</li>
+                    </ul>
+                </div>
+            </article>
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="reveal">
         <div class="container">
-            <h2 class="section-title">기술 스택</h2>
+            <h2 class="section-title"><span class="section-index">03</span>기술 스택</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Language</h3>
@@ -98,121 +237,68 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="activities" class="reveal">
         <div class="container">
-            <h2 class="section-title">프로젝트</h2>
-            <div class="projects-grid">
-
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <span class="project-badge personal">개인 프로젝트</span>
-                        <a href="https://github.com/younchanhyeok/coldchain" target="_blank" class="project-link">GitHub →</a>
-                    </div>
-                    <h3>coldchain — 콜드체인 IoT 관제·온도 이탈 예측 시스템</h3>
-                    <p class="project-sub">2026.07 · 개인 프로젝트 · 설계·개발 전담</p>
-                    <p class="project-desc">임계값을 넘은 뒤 알리는 관제가 아니라, 넘기 전에 경고하는 시스템. 트래커의 온도·위치를 실시간 수집·이상탐지하고, 추세로부터 이탈 시각을 예측해 사전 경고한다. 예측이 무의미해지는 급변에는 예측을 즉시 무효화하고 확정 알림으로 전환하는 안전한 실패 설계.</p>
-                    <ul class="project-points">
-                        <li>5,000 트래커·초당 1,000건 부하에서 병목을 실측한 뒤 Kafka·TimescaleDB 도입 — 대시보드 조회 p50 22.7초 → 412ms, 수집 p99 462ms → 90ms</li>
-                        <li>예측 모델 2종(선형회귀 / 뉴턴 냉각 물리 모델)을 같은 시드로 짝지어 벤치 — 오탐률 0.68 → 0.04, 우위가 아닌 트레이드오프로 규명해 기본값 선택</li>
-                        <li>화주(JWT)·수령기관(매직링크)·관리자(어드민 키) 역할별 인가 분리, 스코프 위반은 403이 아닌 404 존재 은닉으로 Testcontainers 통합 테스트에서 증명</li>
+            <h2 class="section-title"><span class="section-index">04</span>활동 &amp; 자격증</h2>
+            <div class="activities-layout">
+                <div>
+                    <h3 class="sub-title">활동</h3>
+                    <ul class="timeline">
+                        <li>
+                            <span class="timeline-period">2025. 2학기</span>
+                            <span class="timeline-name">코딩테스트 스터디장</span>
+                        </li>
+                        <li>
+                            <span class="timeline-period">2024. 1학기</span>
+                            <span class="timeline-name">패러글라이딩 동아리</span>
+                        </li>
+                        <li>
+                            <span class="timeline-period">2023. 2학기</span>
+                            <span class="timeline-name">사진동아리</span>
+                        </li>
+                        <li>
+                            <span class="timeline-period">2021. 2학기</span>
+                            <span class="timeline-name">학생회 홍보국</span>
+                        </li>
                     </ul>
-                    <div class="project-tags">
-                        <span>Spring Boot</span><span>Java 17</span><span>Kafka</span><span>TimescaleDB</span><span>PostGIS</span><span>Redis</span><span>FastAPI</span><span>React</span>
+                </div>
+                <div>
+                    <h3 class="sub-title">자격증</h3>
+                    <div class="cert-card">
+                        <div class="cert-icon-box">SQL</div>
+                        <div class="cert-info">
+                            <div class="cert-top">
+                                <span class="cert-name">SQLD</span>
+                                <span class="cert-badge">취득</span>
+                            </div>
+                            <p class="cert-full">SQL 개발자</p>
+                            <p class="cert-meta">한국데이터산업진흥원 · 2025.09.19</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge team">팀 프로젝트</span>
-                        <a href="https://github.com/DGU-CAP" target="_blank" class="project-link">GitHub →</a>
-                    </div>
-                    <h3>AI 기반 K8s 모니터링 플랫폼</h3>
-                    <p class="project-sub">2026.03 – 2026.06 · DGU-CAP · 백엔드 개발</p>
-                    <p class="project-desc">Kubernetes 클러스터의 메트릭/로그/이벤트를 실시간 수집하고, AI 이상 탐지 결과를 바탕으로 티켓을 자동 생성하는 SaaS형 모니터링 플랫폼.</p>
-                    <ul class="project-points">
-                        <li>Prometheus/Loki 연동으로 30초 주기 메트릭 수집 및 룰 기반 이상탐지 구현</li>
-                        <li>이상 감지 시 FastAPI AI 서버 분석 결과로 티켓 자동생성 + SSE 실시간 알림</li>
-                        <li>Terraform으로 AWS EKS 인프라 구성, GitHub Actions CI/CD 파이프라인 운영</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span>Spring Boot</span><span>Java 17</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>AWS EKS</span><span>Terraform</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-badge cap">캡스톤</span>
-                        <a href="https://github.com/CSID-DGU/2025-2-DES4015-Fremen-02" target="_blank" class="project-link">GitHub →</a>
-                    </div>
-                    <h3>Fremen — LLM 기반 스미싱 탐지·차단 서비스</h3>
-                    <p class="project-sub">2025.09 – 2025.12 · 지산학 캡스톤디자인2 · 3인 팀 · 백엔드 담당</p>
-                    <p class="project-desc">On-Device AI로 변형 키워드를 복원하고, KoBERT로 7개 카테고리 분류 후 RAG 기반으로 위험 근거를 자연어 설명하는 Android 스미싱 탐지 서비스.</p>
-                    <ul class="project-points">
-                        <li>Spring Boot API Gateway 구현으로 Android 앱 ↔ FastAPI AI 서버 통신 연결</li>
-                        <li>KoBERT + RAG 파이프라인 연동, 전체 파이프라인 F1-score 0.93 달성</li>
-                        <li>Git-flow 전략 기반 협업 및 프로젝트 문서 전체 통합 관리</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span>Spring Boot</span><span>Java 17</span><span>MySQL</span><span>JPA</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="activities">
-        <div class="container">
-            <h2 class="section-title">활동</h2>
-            <div class="activity-cards">
-                <div class="activity-card">
-                    <span class="activity-period">2025. 2학기</span>
-                    <span class="activity-card-name">코딩테스트 스터디장</span>
-                </div>
-                <div class="activity-card">
-                    <span class="activity-period">2024. 1학기</span>
-                    <span class="activity-card-name">패러글라이딩 동아리</span>
-                </div>
-                <div class="activity-card">
-                    <span class="activity-period">2023. 2학기</span>
-                    <span class="activity-card-name">사진동아리</span>
-                </div>
-                <div class="activity-card">
-                    <span class="activity-period">2021. 2학기</span>
-                    <span class="activity-card-name">학생회 홍보국</span>
-                </div>
-            </div>
-
-            <h2 class="section-title cert-title">자격증</h2>
-            <div class="cert-card-v2">
-                <div class="cert-icon-box">SQL</div>
-                <div class="cert-info">
-                    <div class="cert-top">
-                        <span class="cert-name">SQLD</span>
-                        <span class="cert-badge">취득</span>
-                    </div>
-                    <p class="cert-full">SQL 개발자</p>
-                    <p class="cert-meta">한국데이터산업진흥원 · 2025.09.19</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="reveal">
         <div class="container">
-            <h2 class="section-title">연락처</h2>
-            <div class="contact-content">
-                <a href="mailto:gabi960025@gmail.com" class="contact-item">
-                    <span class="contact-label">Email</span>
-                    <span>gabi960025@gmail.com</span>
-                </a>
-                <a href="https://github.com/younchanhyeok" target="_blank" class="contact-item">
-                    <span class="contact-label">GitHub</span>
-                    <span>github.com/younchanhyeok</span>
-                </a>
+            <h2 class="section-title"><span class="section-index">05</span>연락처</h2>
+            <div class="contact-card">
+                <p class="contact-lead">함께 만들 것이 있다면 편하게 연락 주세요.</p>
+                <div class="contact-links">
+                    <a href="mailto:gabi960025@gmail.com" class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">gabi960025@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/younchanhyeok" target="_blank" rel="noopener" class="contact-item">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/younchanhyeok</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
+    </main>
 
     <footer>
         <p>© 2026 윤찬혁</p>
