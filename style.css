@@ -225,7 +225,7 @@ section { padding: 5rem 2rem; }
     font-weight: 600;
 }
 
-.project-badge.ongoing {
+.project-badge.team {
     background: rgba(63, 185, 80, 0.12);
     color: var(--accent-green);
     border: 1px solid rgba(63, 185, 80, 0.25);
@@ -241,6 +241,12 @@ section { padding: 5rem 2rem; }
     background: rgba(240, 136, 62, 0.12);
     color: var(--accent-orange);
     border: 1px solid rgba(240, 136, 62, 0.25);
+}
+
+.project-badge.personal {
+    background: rgba(188, 140, 255, 0.12);
+    color: var(--accent-purple);
+    border: 1px solid rgba(188, 140, 255, 0.25);
 }
 
 .project-link {
@@ -440,6 +446,7 @@ section { padding: 5rem 2rem; }
     color: var(--text-muted);
 }
 
+
 /* Contact */
 .contact-content {
     display: flex;
@@ -484,5 +491,4 @@ footer {
     section { padding: 4rem 1.25rem; }
     .hero-buttons { flex-direction: column; width: fit-content; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
-    .activity-cards { grid-template-columns: 1fr 1fr; }
 }
