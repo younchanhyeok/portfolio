@@ -577,6 +577,11 @@ section { padding: 6rem 2rem; }
     margin-bottom: 1.5rem;
 }
 
+.project-desc strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
 .metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
