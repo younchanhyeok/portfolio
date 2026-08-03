@@ -308,12 +308,115 @@ section { padding: 6rem 2rem; }
 }
 
 /* ── About ───────────────────────────────────────── */
+.about-quote {
+    margin-bottom: 3rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--accent);
+}
+
+.about-quote p {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.about-quote cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    letter-spacing: 0.02em;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 300px;
     gap: 3rem;
     align-items: start;
 }
+
+.about-content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* 즉시 → 상시 → 사전 */
+.arc {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 3.5rem;
+    counter-reset: arc;
+}
+
+.arc li {
+    position: relative;
+    padding: 1.5rem;
+    background: var(--bg-elev);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    transition: border-color 0.2s;
+}
+
+.arc li:hover { border-color: rgba(88, 166, 255, 0.3); }
+
+.arc li:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -1rem;
+    top: 2.1rem;
+    width: 1.5rem;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
+.arc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.arc-step {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--accent);
+}
+
+.arc-project {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.arc-q {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.65;
+}
+
+.arc-body {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+.arc-body strong { color: var(--text); font-weight: 600; }
 
 .about-content {
     display: flex;
@@ -785,6 +888,20 @@ footer {
     .activities-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .arc {
+        grid-template-columns: 1fr;
+        margin-top: 2.5rem;
+    }
+
+    .arc li:not(:last-child)::after {
+        content: '↓';
+        right: auto;
+        left: 1.5rem;
+        top: auto;
+        bottom: -1.05rem;
+        width: auto;
     }
 
     .project {

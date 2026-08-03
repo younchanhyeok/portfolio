@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>윤찬혁 | Backend Developer</title>
-    <meta name="description" content="코드와 그 코드가 동작하는 운영 환경까지 함께 이해하는 백엔드 개발자 윤찬혁의 포트폴리오.">
+    <meta name="description" content="시스템이 위험을 알아차리는 시점을 앞당기는 설계를 고민하는 백엔드 개발자 윤찬혁의 포트폴리오.">
     <meta property="og:title" content="윤찬혁 | Backend Developer">
-    <meta property="og:description" content="측정한 뒤에 도입한다 — 실측 근거로 설계를 설명하는 백엔드 개발자.">
+    <meta property="og:description" content="즉시 알고, 스스로 알고, 미리 아는 시스템 — 위험 인지 시점을 앞당겨 온 세 개의 프로젝트.">
     <meta property="og:type" content="website">
     <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="style.css">
@@ -33,8 +33,8 @@
             <p class="hero-eyebrow">Backend Developer</p>
             <h1>윤찬혁</h1>
             <p class="hero-subtitle">
-                코드와 그 코드가 동작하는 운영 환경까지 함께 이해하는 백엔드 개발자를 지향합니다.<br>
-                <span class="highlight">기술은 필요를 겪은 뒤에 넣고, 주장은 실측으로만 합니다.</span>
+                시스템이 위험을 알아차리는 시점을 앞당기는 설계를 고민합니다.<br>
+                <span class="highlight">즉시 알고, 스스로 알고, 미리 아는 시스템으로.</span>
             </p>
 
             <div class="hero-stats">
@@ -67,11 +67,16 @@
     <section id="about" class="reveal">
         <div class="container">
             <h2 class="section-title"><span class="section-index">01</span>소개</h2>
+            <blockquote class="about-quote">
+                <p>“시스템이 위험을 알아차리는 시점을<br>얼마나 앞당길 수 있는가”</p>
+                <cite>백엔드를 공부하며 붙잡아온 질문</cite>
+            </blockquote>
+
             <div class="about-grid">
                 <div class="about-content">
-                    <p>동국대학교 정보통신공학과에서 백엔드 개발을 공부하고 있습니다. Spring Boot 기반 API 서버 개발부터 Docker, Kubernetes를 활용한 클라우드 인프라 구성까지, 코드가 작성되는 순간부터 운영 환경에서 동작하는 순간까지의 전반에 관심을 가지고 있습니다.</p>
-                    <p>기술은 필요를 겪은 뒤에 넣는다는 원칙을 지킵니다. 콜드체인 관제 시스템에서는 5,000대 부하로 병목을 직접 확인한 뒤에야 Kafka와 TimescaleDB로 전환했고, 예측 모델도 "정확하다"고 주장하는 대신 통제된 벤치로 트레이드오프를 측정해 기본값을 정했습니다.</p>
-                    <p>한 번 시작한 일은 어중간하게 끝내지 않고 더 나은 형태로 다듬어가는 태도를 중요하게 생각합니다.</p>
+                    <p>동국대학교 정보통신공학과에서 백엔드 개발을 공부하고 있습니다. 물으면 답하는 시스템, 스스로 감시하는 시스템, 터지기 전에 아는 시스템은 각각 다른 설계를 요구했습니다. 세 개의 프로젝트에서 같은 질문을 세 번 다르게 풀며, 위험을 알아차리는 시점을 <strong>즉시에서 상시로, 상시에서 사전으로</strong> 앞당겨 왔습니다.</p>
+                    <p>기술은 필요를 겪은 뒤에 넣습니다. 콜드체인 관제 시스템에서는 5,000대 부하로 병목을 직접 확인한 뒤에야 Kafka와 TimescaleDB로 전환했고, 예측 모델도 "정확하다"고 주장하는 대신 통제된 벤치로 트레이드오프를 측정해 기본값을 정했습니다.</p>
+                    <p>다만 지금까지 제 시스템의 사용자는 시뮬레이터와 팀원이었습니다. 실제 트래픽과 실제 장애가 흐르는 환경에서, 만들 줄 아는 개발자에서 운영되는 서비스를 책임질 줄 아는 개발자로 한 걸음 더 나아가는 것이 다음 목표입니다.</p>
                 </div>
                 <aside class="about-facts">
                     <div class="fact">
@@ -80,7 +85,7 @@
                     </div>
                     <div class="fact">
                         <span class="fact-label">관심 영역</span>
-                        <span class="fact-value">분산 데이터 파이프라인 · 관측 가능성 · 인프라 자동화</span>
+                        <span class="fact-value">이상 탐지 · 관측 가능성 · 데이터 파이프라인</span>
                     </div>
                     <div class="fact">
                         <span class="fact-label">작업 방식</span>
@@ -88,6 +93,33 @@
                     </div>
                 </aside>
             </div>
+
+            <ol class="arc">
+                <li>
+                    <div class="arc-head">
+                        <span class="arc-step">즉시</span>
+                        <span class="arc-project">Fremen</span>
+                    </div>
+                    <p class="arc-q">“모든 요청을 AI에 태우지 않고도 즉시 판별할 수 있는가”</p>
+                    <p class="arc-body">룰 기반 1차 필터로 안전한 문자는 AI 호출 없이 0.01초대에 판별하고, 의심 문자만 비동기로 AI 서버에 넘기는 연동 계약을 설계했습니다. AI를 쓰는 서비스일수록 AI를 거치지 않는 경로가 성능을 결정한다는 것을 배웠습니다.</p>
+                </li>
+                <li>
+                    <div class="arc-head">
+                        <span class="arc-step">상시</span>
+                        <span class="arc-project">K8s 모니터링</span>
+                    </div>
+                    <p class="arc-q">“요청을 기다리지 않고 시스템이 스스로 감시하게 할 수 있는가”</p>
+                    <p class="arc-body">Kubernetes API·Prometheus·Loki라는 성격이 다른 세 소스를 주기 수집하는 모듈로 탐지 파이프라인의 입구를 만들고, EKS 위에 GitOps 기반 CI/CD를 구축했습니다. 감시하는 시스템은 그 자신이 가장 먼저 살아 있어야 했습니다.</p>
+                </li>
+                <li>
+                    <div class="arc-head">
+                        <span class="arc-step">사전</span>
+                        <span class="arc-project">coldchain</span>
+                    </div>
+                    <p class="arc-q">“터지기 전에 알 수 있는가”</p>
+                    <p class="arc-body">통계 탐지로 급변과 점진 이탈을 구분한 뒤, 온도 추세로 임계 도달 시각을 계산해 이탈 전에 경고를 보냈습니다. 가장 오래 고민한 것은 예측이 맞았을 때가 아니라 <strong>틀렸을 때의 설계</strong>였습니다.</p>
+                </li>
+            </ol>
         </div>
     </section>
 
