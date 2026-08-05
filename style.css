@@ -379,6 +379,14 @@ section { padding: 6rem 2rem; }
     line-height: 1;
 }
 
+.arc-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    text-decoration: none;
+    color: inherit;
+}
+
 .arc-head {
     display: flex;
     align-items: center;
@@ -401,7 +409,24 @@ section { padding: 6rem 2rem; }
     border: 1px solid var(--border);
     border-radius: 20px;
     white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
 }
+
+.arc-project::after {
+    content: ' ↓';
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.arc li:hover .arc-project,
+.arc-link:focus-visible .arc-project {
+    color: var(--accent);
+    border-color: rgba(88, 166, 255, 0.45);
+}
+
+.arc li:hover .arc-project::after { transform: translateY(2px); }
+
+.arc-link:focus-visible { outline-offset: 6px; }
 
 .arc-q {
     font-size: 0.875rem;

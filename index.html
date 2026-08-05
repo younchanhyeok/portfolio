@@ -96,28 +96,34 @@
 
             <ol class="arc">
                 <li>
-                    <div class="arc-head">
-                        <span class="arc-step">즉시</span>
-                        <span class="arc-project">Fremen</span>
-                    </div>
-                    <p class="arc-q">“모든 요청을 AI에 태우지 않고도 즉시 판별할 수 있는가”</p>
-                    <p class="arc-body">룰 기반 1차 필터로 안전한 문자는 AI 호출 없이 0.01초대에 판별하고, 의심 문자만 비동기로 AI 서버에 넘기는 연동 계약을 설계했습니다. AI를 쓰는 서비스일수록 AI를 거치지 않는 경로가 성능을 결정한다는 것을 배웠습니다.</p>
+                    <a class="arc-link" href="#p-fremen">
+                        <div class="arc-head">
+                            <span class="arc-step">즉시</span>
+                            <span class="arc-project">Fremen</span>
+                        </div>
+                        <p class="arc-q">“모든 요청을 AI에 태우지 않고도 즉시 판별할 수 있는가”</p>
+                        <p class="arc-body">룰 기반 1차 필터로 안전한 문자는 AI 호출 없이 0.01초대에 판별하고, 의심 문자만 비동기로 AI 서버에 넘기는 연동 계약을 설계했습니다. AI를 쓰는 서비스일수록 AI를 거치지 않는 경로가 성능을 결정한다는 것을 배웠습니다.</p>
+                    </a>
                 </li>
                 <li>
-                    <div class="arc-head">
-                        <span class="arc-step">상시</span>
-                        <span class="arc-project">K8s 모니터링</span>
-                    </div>
-                    <p class="arc-q">“요청을 기다리지 않고 시스템이 스스로 감시하게 할 수 있는가”</p>
-                    <p class="arc-body">Kubernetes API·Prometheus·Loki라는 성격이 다른 세 소스를 주기 수집하는 모듈로 탐지 파이프라인의 입구를 만들고, EKS 위에 GitOps 기반 CI/CD를 구축했습니다. 감시하는 시스템은 그 자신이 가장 먼저 살아 있어야 했습니다.</p>
+                    <a class="arc-link" href="#p-k8s">
+                        <div class="arc-head">
+                            <span class="arc-step">상시</span>
+                            <span class="arc-project">K8s 모니터링</span>
+                        </div>
+                        <p class="arc-q">“요청을 기다리지 않고 시스템이 스스로 감시하게 할 수 있는가”</p>
+                        <p class="arc-body">Kubernetes API·Prometheus·Loki라는 성격이 다른 세 소스를 주기 수집하는 모듈로 탐지 파이프라인의 입구를 만들고, EKS 위에 GitOps 기반 CI/CD를 구축했습니다. 감시하는 시스템은 그 자신이 가장 먼저 살아 있어야 했습니다.</p>
+                    </a>
                 </li>
                 <li>
-                    <div class="arc-head">
-                        <span class="arc-step">사전</span>
-                        <span class="arc-project">coldchain</span>
-                    </div>
-                    <p class="arc-q">“터지기 전에 알 수 있는가”</p>
-                    <p class="arc-body">통계 탐지로 급변과 점진 이탈을 구분한 뒤, 온도 추세로 임계 도달 시각을 계산해 이탈 전에 경고를 보냈습니다. 가장 오래 고민한 것은 예측이 맞았을 때가 아니라 <strong>틀렸을 때의 설계</strong>였습니다.</p>
+                    <a class="arc-link" href="#p-coldchain">
+                        <div class="arc-head">
+                            <span class="arc-step">사전</span>
+                            <span class="arc-project">coldchain</span>
+                        </div>
+                        <p class="arc-q">“터지기 전에 알 수 있는가”</p>
+                        <p class="arc-body">통계 탐지로 급변과 점진 이탈을 구분한 뒤, 온도 추세로 임계 도달 시각을 계산해 이탈 전에 경고를 보냈습니다. 가장 오래 고민한 것은 예측이 맞았을 때가 아니라 <strong>틀렸을 때의 설계</strong>였습니다.</p>
+                    </a>
                 </li>
             </ol>
         </div>
@@ -127,7 +133,7 @@
         <div class="container">
             <h2 class="section-title reveal"><span class="section-index">02</span>프로젝트</h2>
 
-            <article class="project featured reveal">
+            <article id="p-coldchain" class="project featured reveal">
                 <div class="project-meta">
                     <span class="project-badge personal">개인 프로젝트</span>
                     <p class="project-period">2026.07</p>
@@ -166,7 +172,7 @@
                 </div>
             </article>
 
-            <article class="project reveal">
+            <article id="p-k8s" class="project reveal">
                 <div class="project-meta">
                     <span class="project-badge team">팀 프로젝트</span>
                     <p class="project-period">2026.03 – 2026.06</p>
@@ -189,7 +195,7 @@
                 </div>
             </article>
 
-            <article class="project reveal">
+            <article id="p-fremen" class="project reveal">
                 <div class="project-meta">
                     <span class="project-badge cap">캡스톤</span>
                     <p class="project-period">2025.09 – 2025.12</p>

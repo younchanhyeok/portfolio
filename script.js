@@ -42,6 +42,23 @@ const navObserver = new IntersectionObserver(entries => {
 
 watched.forEach(s => navObserver.observe(s));
 
+/* 해시로 이동한 대상은 페이드인을 기다리지 않고 즉시 노출 */
+function revealHashTarget() {
+    if (!location.hash) return;
+    const target = document.querySelector(location.hash);
+    if (target) target.classList.add('visible');
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', () => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.classList.add('visible');
+    });
+});
+
+window.addEventListener('hashchange', revealHashTarget);
+revealHashTarget();
+
 /* 스크롤 진입 시 페이드 인 */
 const revealTargets = document.querySelectorAll('.reveal');
 
