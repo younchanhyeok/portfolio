@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>윤찬혁 | Backend Developer</title>
-    <meta name="description" content="시스템이 위험을 알아차리는 시점을 앞당기는 설계를 고민하는 백엔드 개발자 윤찬혁의 포트폴리오.">
+    <meta name="description" content="백엔드 개발자 윤찬혁의 포트폴리오. 모노플로우 인턴으로 개발 중인 MonoLab과 데이터 처리, 서비스 연동, 현장 운영 경험을 소개합니다.">
     <meta property="og:title" content="윤찬혁 | Backend Developer">
-    <meta property="og:description" content="즉시 알고, 스스로 알고, 미리 아는 시스템 — 위험 인지 시점을 앞당겨 온 세 개의 프로젝트.">
+    <meta property="og:description" content="실습 시작부터 정산까지. MonoLab을 중심으로 구현과 검증, 운영 경험을 소개합니다.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://younchanhyeok.github.io/portfolio/">
     <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,340 +16,194 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <nav class="navbar">
-        <a href="#hero" class="nav-logo">YCH</a>
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <nav class="navbar" aria-label="주요 메뉴">
+        <a href="#hero" class="nav-logo" aria-label="윤찬혁 포트폴리오 처음으로">YCH</a>
         <ul class="nav-links">
-            <li><a href="#about">소개</a></li>
-            <li><a href="#projects">프로젝트</a></li>
-            <li><a href="#skills">기술</a></li>
-            <li><a href="#activities">활동</a></li>
-            <li><a href="#contact">연락처</a></li>
+            <li><a href="#about">소개</a></li><li><a href="#projects">프로젝트</a></li><li><a href="#skills">기술</a></li><li><a href="#activities">활동</a></li><li><a href="#contact">연락처</a></li>
         </ul>
     </nav>
-
     <header id="hero">
         <div class="container hero-inner">
-            <p class="hero-eyebrow">Backend Developer</p>
+            <p class="hero-eyebrow">Backend Developer · 모노플로우 인턴</p>
             <h1>윤찬혁</h1>
-            <p class="hero-subtitle">
-                시스템이 위험을 알아차리는 시점을 앞당기는 설계를 고민합니다.<br>
-                <span class="highlight">즉시 알고, 스스로 알고, 미리 아는 시스템으로.</span>
-            </p>
-
+            <p class="hero-subtitle">실습이 끝나도, 개발자의 일은 남습니다.<br><span class="highlight">기능 구현부터 종료·정산·복구까지 확인하는 백엔드 개발자입니다.</span></p>
             <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-label">대시보드 조회 p50</span>
-                    <span class="stat-value"><s>22.7s</s><i>→</i><em>412ms</em></span>
-                    <span class="stat-note">coldchain · 5,000 트래커 부하</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">예측 오탐률</span>
-                    <span class="stat-value"><s>0.68</s><i>→</i><em>0.04</em></span>
-                    <span class="stat-note">coldchain · 짝지은 모델 벤치</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">AI 미경유 즉시 판별</span>
-                    <span class="stat-value"><em>0.01초대</em></span>
-                    <span class="stat-note">Fremen · 룰 기반 1차 필터</span>
-                </div>
+                <div class="stat"><span class="stat-label">주력 프로젝트</span><span class="stat-value"><em>MonoLab</em></span><span class="stat-note">GPU 실습 플랫폼 · 개발·검증 중 / 납품 예정</span></div>
+                <div class="stat"><span class="stat-label">대시보드 조회 p50</span><span class="stat-value"><s>22.7s</s><i>→</i><em>412ms</em></span><span class="stat-note">콜드체인 · 가상 장비 5,000대 부하 시험</span></div>
+                <div class="stat"><span class="stat-label">구현에서 현장까지</span><span class="stat-value"><em>AI Festa</em></span><span class="stat-note">부스 안내 로봇 개발·운영 · 2026.10</span></div>
             </div>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-primary">프로젝트 보기</a>
-                <a href="https://github.com/younchanhyeok" class="btn-secondary" target="_blank" rel="noopener">GitHub</a>
-                <a href="mailto:ych758@naver.com" class="btn-secondary">이메일</a>
-            </div>
+            <div class="hero-buttons"><a href="#p-monolab" class="btn-primary">MonoLab 보기</a><a href="https://github.com/younchanhyeok" class="btn-secondary" target="_blank" rel="noopener">GitHub</a><a href="mailto:ych758@naver.com" class="btn-secondary">이메일</a></div>
         </div>
     </header>
-
-    <main>
+    <main id="main">
     <section id="about" class="reveal">
         <div class="container">
             <h2 class="section-title"><span class="section-index">01</span>소개</h2>
-            <blockquote class="about-quote">
-                <p>“시스템이 위험을 알아차리는 시점을<br>얼마나 앞당길 수 있는가”</p>
-                <cite>백엔드를 공부하며 붙잡아온 질문</cite>
-            </blockquote>
-
             <div class="about-grid">
                 <div class="about-content">
-                    <p>동국대학교 정보통신공학과에서 백엔드 개발을 공부하고 있습니다. 물으면 답하는 시스템, 스스로 감시하는 시스템, 터지기 전에 아는 시스템은 각각 다른 설계를 요구했습니다. 세 개의 프로젝트에서 같은 질문을 세 번 다르게 풀며, 위험을 알아차리는 시점을 <strong>즉시에서 상시로, 상시에서 사전으로</strong> 앞당겨 왔습니다.</p>
-                    <p>기술은 필요를 겪은 뒤에 넣습니다. 콜드체인 관제 시스템에서는 5,000대 부하로 병목을 직접 확인한 뒤에야 Kafka와 TimescaleDB로 전환했고, 예측 모델도 "정확하다"고 주장하는 대신 통제된 벤치로 트레이드오프를 측정해 기본값을 정했습니다.</p>
-                    <p>다만 지금까지 제 시스템의 사용자는 시뮬레이터와 팀원이었습니다. 실제 트래픽과 실제 장애가 흐르는 환경에서, 만들 줄 아는 개발자에서 운영되는 서비스를 책임질 줄 아는 개발자로 한 걸음 더 나아가는 것이 다음 목표입니다.</p>
+                    <p><strong>사용자의 업무 규칙을 시스템 동작으로 구현합니다.</strong> 모노플로우 인턴으로 GPU 실습 플랫폼 MonoLab을 개발하고 있습니다. 학생의 실습 시작부터 교사의 관리와 운영자의 사용량 확인까지 연결했습니다.</p>
+                    <p>실습 화면이 열리는 것뿐 아니라 종료 이후도 확인했습니다. 실제 GPU에서 파일 보존과 동시 실습을 시험했고 자원 종료를 확인한 뒤 정산하도록 구성했습니다. 현재는 납품을 위한 개발·검증 단계이며 회사 망 서버 배포와 SSH 유지보수를 준비하고 있습니다.</p>
+                    <p>CJ AI SW Wave에서는 콜드체인 개인 프로젝트의 처리 지연을 개선했습니다. 인턴 근무 중에는 안내 로봇을 행사장에서 운영하고 제품 오류를 재현해 보고했습니다. 구현 결과를 실제 사용 조건에서 확인하는 경험을 쌓고 있습니다.</p>
                 </div>
-                <aside class="about-facts">
-                    <div class="fact">
-                        <span class="fact-label">전공</span>
-                        <span class="fact-value">동국대학교 정보통신공학과</span>
-                    </div>
-                    <div class="fact">
-                        <span class="fact-label">관심 영역</span>
-                        <span class="fact-value">이상 탐지 · 관측 가능성 · 데이터 파이프라인</span>
-                    </div>
-                    <div class="fact">
-                        <span class="fact-label">작업 방식</span>
-                        <span class="fact-value">병목은 측정하고, 설계 판단은 근거를 남긴다</span>
-                    </div>
+                <aside class="about-facts" aria-label="기본 정보">
+                    <div class="fact"><span class="fact-label">전공</span><span class="fact-value">동국대학교 정보통신공학과</span></div>
+                    <div class="fact"><span class="fact-label">현재</span><span class="fact-value">모노플로우 인턴 재직 중<br>2026.09 – 현재</span></div>
+                    <div class="fact"><span class="fact-label">주요 경험</span><span class="fact-value">백엔드 · 데이터 처리 · 서비스 연동<br>실환경 검증 · 배포 준비 · 현장 운영</span></div>
                 </aside>
             </div>
-
-            <ol class="arc">
-                <li>
-                    <a class="arc-link" href="#p-fremen">
-                        <div class="arc-head">
-                            <span class="arc-step">즉시</span>
-                            <span class="arc-project">Fremen</span>
-                        </div>
-                        <p class="arc-q">“모든 요청을 AI에 태우지 않고도 즉시 판별할 수 있는가”</p>
-                        <p class="arc-body">룰 기반 1차 필터로 안전한 문자는 AI 호출 없이 0.01초대에 판별하고, 의심 문자만 비동기로 AI 서버에 넘기는 연동 계약을 설계했습니다. AI를 쓰는 서비스일수록 AI를 거치지 않는 경로가 성능을 결정한다는 것을 배웠습니다.</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="arc-link" href="#p-k8s">
-                        <div class="arc-head">
-                            <span class="arc-step">상시</span>
-                            <span class="arc-project">K8s 모니터링</span>
-                        </div>
-                        <p class="arc-q">“요청을 기다리지 않고 시스템이 스스로 감시하게 할 수 있는가”</p>
-                        <p class="arc-body">Kubernetes API·Prometheus·Loki라는 성격이 다른 세 소스를 주기 수집하는 모듈로 탐지 파이프라인의 입구를 만들고, EKS 위에 GitOps 기반 CI/CD를 구축했습니다. 감시하는 시스템은 그 자신이 가장 먼저 살아 있어야 했습니다.</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="arc-link" href="#p-coldchain">
-                        <div class="arc-head">
-                            <span class="arc-step">사전</span>
-                            <span class="arc-project">coldchain</span>
-                        </div>
-                        <p class="arc-q">“터지기 전에 알 수 있는가”</p>
-                        <p class="arc-body">통계 탐지로 급변과 점진 이탈을 구분한 뒤, 온도 추세로 임계 도달 시각을 계산해 이탈 전에 경고를 보냈습니다. 가장 오래 고민한 것은 예측이 맞았을 때가 아니라 <strong>틀렸을 때의 설계</strong>였습니다.</p>
-                    </a>
-                </li>
-            </ol>
+            <div class="project-index" aria-label="프로젝트 바로가기"><a href="#p-monolab">01 MonoLab</a><a href="#p-coldchain">02 콜드체인</a><a href="#p-robot">03 모노쥐</a><a href="#p-k8s">04 DGU-CAP</a><a href="#p-fremen">05 Fremen</a><a href="#p-egg">06 Eggbenedet</a></div>
         </div>
     </section>
-
     <section id="projects">
         <div class="container">
             <h2 class="section-title reveal"><span class="section-index">02</span>프로젝트</h2>
-
-            <article id="p-coldchain" class="project featured reveal">
+            <article id="p-monolab" class="project featured reveal">
                 <div class="project-meta">
-                    <span class="project-badge personal">개인 프로젝트</span>
-                    <p class="project-period">2026.07</p>
-                    <p class="project-role">설계·개발 전담</p>
-                    <div class="project-tags">
-                        <span>Spring Boot</span><span>Java 17</span><span>Kafka</span><span>TimescaleDB</span><span>PostGIS</span><span>Redis</span><span>FastAPI</span><span>React</span>
-                    </div>
+                    <span class="project-badge personal">주력 · 인턴 프로젝트</span><p class="project-period">2026.10 – 진행 중</p><p class="project-role">모노플로우 · 구현·검증<br>납품 및 회사 망 서버 배포 예정</p>
+                    <div class="project-tags"><span>Python</span><span>JupyterHub</span><span>VESSL</span><span>PostgreSQL</span><span>GPU</span></div>
+                </div>
+                <div class="project-body">
+                    <h3>MonoLab</h3><p class="project-tagline">실습 종료 버튼 너머, 정산까지</p>
+                    <p class="project-desc"><strong>GPU 실습의 시작·종료·정산을 연결하고 실제 A100에서 검증했습니다.</strong> 학교·기관의 학생과 교사가 사용하도록 개발 중인 실습 플랫폼입니다. 역할별 권한과 실습 시간 관리부터 GPU 자원 회수까지 구현했습니다.</p>
+                    <ol class="system-flow" aria-label="MonoLab 실습 처리 흐름"><li><span>01</span>시간 확보</li><li><span>02</span>실습 준비</li><li><span>03</span>사용·종료</li><li><span>04</span>종료 확인·정산</li></ol>
+                    <ul class="project-points">
+                        <li><strong>사용 규칙 구현.</strong> 학생·교사·관리자의 접근 범위를 나눴습니다. 실습 전 선택 시간을 확보하고 실행 기록과 정산 기준을 함께 저장했습니다.</li>
+                        <li><strong>종료와 정산 분리.</strong> Lab 접속 준비가 끝난 뒤 사용 시간을 계산합니다. 공급자의 GPU와 Notebook 종료를 확인한 뒤 정산을 확정하고 미사용 시간을 반환하도록 구성했습니다. 중복 정산도 방지했습니다.</li>
+                        <li><strong>장애 대응.</strong> Hub와 별도로 동작하는 감시 프로세스로 GPU 회수를 처리했습니다. 사용 시간을 확정하기 어려운 장애 건은 운영자가 기록을 남겨 정산하도록 했습니다.</li>
+                        <li><strong>실환경 검증.</strong> 실제 A100의 CUDA 연산과 두 학생의 별도 GPU 동시 실습을 확인했습니다. 파일 보존과 로그아웃을 시험했고 시간 만료·30분 미사용 종료·원장 분리도 확인했습니다.</li>
+                    </ul>
+                    <p class="project-note"><strong>다음 단계</strong> 시연 승인 후 회사 망 서버에 배포하고 직접 SSH로 유지보수할 예정입니다. GPU 실행 자원과 영구 저장소는 VESSL을 사용합니다. 현재 납품·운영 완료 단계는 아닙니다.</p>
+                </div>
+            </article>
+            <article id="p-coldchain" class="project reveal">
+                <div class="project-meta">
+                    <span class="project-badge personal">부트캠프 · 개인 프로젝트</span><p class="project-period">2026.07</p><p class="project-role">CJ AI SW Wave · 설계·개발</p>
+                    <div class="project-tags"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>TimescaleDB</span><span>PostGIS</span><span>Redis</span><span>FastAPI</span><span>React</span></div>
                     <a href="https://github.com/younchanhyeok/coldchain" target="_blank" rel="noopener" class="project-link">GitHub 저장소 →</a>
                 </div>
-
                 <div class="project-body">
-                    <h3>coldchain</h3>
-                    <p class="project-tagline">콜드체인 IoT 관제·온도 이탈 예측 시스템</p>
-                    <p class="project-desc">임계값을 넘은 뒤 알리는 관제가 아니라, 넘기 전에 경고하는 시스템. 트래커의 온도·위치를 실시간 수집·이상탐지하고, 추세로부터 이탈 시각을 예측해 사전 경고한다. 예측이 무의미해지는 급변에는 예측을 즉시 무효화하고 확정 알림으로 전환하는 안전한 실패 설계.</p>
-
+                    <h3>콜드체인 관제·온도 이탈 예측</h3><p class="project-tagline">22.7초의 기다림을 412ms로</p>
+                    <p class="project-desc"><strong>가상 장비 5,000대 부하 시험에서 대시보드 조회 p50을 22.7초에서 412ms로 줄였습니다.</strong> 운송 중 온도·위치를 수집하고 온도 이탈 가능성을 알리는 개인 프로젝트입니다. 부하가 늘 때 쌓이는 처리 지연을 줄이는 작업을 진행했습니다.</p>
                     <div class="metrics">
-                        <div class="metric">
-                            <span class="metric-label">대시보드 조회 p50</span>
-                            <span class="metric-value"><s>22.7s</s><i>→</i><em>412ms</em></span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label">수집 p99</span>
-                            <span class="metric-value"><s>462ms</s><i>→</i><em>90ms</em></span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label">예측 오탐률</span>
-                            <span class="metric-value"><s>0.68</s><i>→</i><em>0.04</em></span>
-                        </div>
+                        <div class="metric"><span class="metric-label">대시보드 조회 p50</span><span class="metric-value"><s>22.7s</s><i>→</i><em>412ms</em></span></div>
+                        <div class="metric"><span class="metric-label">조회 타임아웃</span><span class="metric-value"><s>83%</s><i>→</i><em>0%</em></span></div>
+                        <div class="metric"><span class="metric-label">수집 요청 202 응답 p99</span><span class="metric-value"><s>462ms</s><i>→</i><em>90ms</em></span></div>
                     </div>
-
                     <ul class="project-points">
-                        <li>5,000 트래커·초당 1,000건 부하로 병목을 실측한 뒤에야 Kafka·TimescaleDB 도입 — 값싼 최적화부터 단계별로 측정해 before/after를 수치로 남김</li>
-                        <li>예측 모델 2종(선형회귀 / 뉴턴 냉각 물리 모델)을 같은 시드로 짝지어 벤치 — 우위가 아닌 트레이드오프로 규명하고 근거를 남겨 기본값 선택</li>
-                        <li>화주(JWT)·수령기관(매직링크)·관리자(어드민 키) 역할별 인가 분리, 스코프 위반은 403이 아닌 404 존재 은닉으로 Testcontainers 통합 테스트에서 증명</li>
+                        <li><strong>수집·저장 개선.</strong> Kafka와 TimescaleDB를 활용하고 장비별 메시지 키와 배치 저장을 적용했습니다. 중복되거나 늦게 도착한 데이터도 처리했습니다.</li>
+                        <li><strong>작업 자원 분리.</strong> 수집과 예측의 실행 자원을 나누고 작업 큐 크기를 제한했습니다. 큐에서 거절된 작업을 계측하고 원본 저장과 후속 분석의 실패 처리를 분리했습니다.</li>
+                        <li><strong>모델 선택.</strong> 두 예측 모델을 같은 조건에서 비교했습니다. 새 모델은 오탐이 줄었지만 놓침과 시각 오차가 늘어 기존 모델을 기본값으로 유지했습니다.</li>
                     </ul>
+                    <p class="project-note">README에 기록한 로컬 시뮬레이터 결과입니다. 조건은 가상 장비 5,000대·초당 1,000건입니다. SSE 반영 지연은 개선 후에도 37.8초였으며 모든 후속 처리가 즉시 완료된 것은 아닙니다.</p>
                 </div>
             </article>
-
+            <article id="p-robot" class="project reveal">
+                <div class="project-meta">
+                    <span class="project-badge team">인턴 · 현장 운영</span><p class="project-period">2026.09 – 2026.10</p><p class="project-role">모노플로우 · 음성 연동·동작 제어<br>로봇 내부 배포·행사 운영</p>
+                    <div class="project-tags"><span>Python</span><span>WebSocket</span><span>UDP</span><span>systemd</span><span>Reachy Mini</span></div>
+                </div>
+                <div class="project-body">
+                    <h3>모노쥐 부스 안내 로봇</h3><p class="project-tagline">요청 성공에서 실제 목소리로</p>
+                    <p class="project-desc"><strong>음성 서비스와 로봇 동작을 연결해 AI Festa 부스에서 운영했습니다.</strong> 방문객에게 먼저 인사하고 퀴즈와 대화로 제품을 소개하는 로봇입니다. 요청은 수락됐지만 소리가 나오지 않은 채 다음 단계로 넘어가는 문제를 수정했습니다.</p>
+                    <ul class="project-points">
+                        <li><strong>발화 기준 수정.</strong> 로봇 앱과 음성 API 사이의 WebSocket 규격을 변환하는 브리지를 구현했습니다. 실제 소리 출력 여부로 상태를 전환하고 발화가 없을 때 다시 시도하도록 했습니다.</li>
+                        <li><strong>반복과 동작 조정.</strong> 방문객마다 퀴즈를 순환 배정했습니다. 음성 신호와 몸짓을 연결하고 얼굴 추적과 동작의 충돌을 조정했습니다.</li>
+                        <li><strong>실행 환경 이전.</strong> 브리지를 로봇 내부의 systemd 서비스로 옮겼습니다. 재부팅·강제 종료 후 재연결을 시험하고 배포 확인과 롤백 절차를 정리했습니다.</li>
+                        <li><strong>현장 운영.</strong> 10월 6~8일 행사장에서 운영했습니다. 인터넷 장애 이후 재연결을 확인했고 방문객에게 제품 기능과 이용 방법도 설명했습니다.</li>
+                    </ul>
+                    <p class="project-note">기반 SDK와 음성 모델을 활용했습니다. 현장에서 발생한 멈춤 사례의 원인은 확정하지 못했으며 이후 개선 과제로 남겼습니다.</p>
+                </div>
+            </article>
             <article id="p-k8s" class="project reveal">
                 <div class="project-meta">
-                    <span class="project-badge team">팀 프로젝트</span>
-                    <p class="project-period">2026.03 – 2026.06</p>
-                    <p class="project-role">DGU-CAP · 데이터 수집·배포 담당</p>
-                    <div class="project-tags">
-                        <span>Spring Boot</span><span>Java 17</span><span>Kubernetes</span><span>Prometheus</span><span>Loki</span><span>Docker</span><span>AWS EKS</span><span>ArgoCD</span>
-                    </div>
-                    <a href="https://github.com/DGU-CAP" target="_blank" rel="noopener" class="project-link">GitHub 저장소 →</a>
+                    <span class="project-badge team">팀 프로젝트</span><p class="project-period">2026.03 – 2026.06</p><p class="project-role">DGU-CAP · 운영 데이터 수집<br>수집 장애 수정·배포 자동화</p>
+                    <div class="project-tags"><span>Spring Boot</span><span>Kubernetes</span><span>Prometheus</span><span>Loki</span><span>Docker</span><span>GitHub Actions</span><span>Argo CD</span></div>
+                    <a href="https://github.com/DGU-CAP/backend" target="_blank" rel="noopener" class="project-link">백엔드 저장소 →</a><a href="https://github.com/DGU-CAP/infra" target="_blank" rel="noopener" class="project-link">인프라 저장소 →</a>
                 </div>
-
                 <div class="project-body">
-                    <h3>AI 기반 K8s 모니터링 플랫폼</h3>
-                    <p class="project-tagline">탐지 파이프라인의 입구와 배포 자동화를 맡다</p>
-                    <p class="project-desc">Kubernetes 클러스터의 메트릭·로그·이벤트를 실시간 수집하고, AI 이상 탐지 결과를 바탕으로 티켓을 자동 생성하는 SaaS형 모니터링 플랫폼. 팀 프로젝트에서 <strong>데이터 수집 레이어와 배포</strong>를 담당했습니다.</p>
+                    <h3>Kubernetes 운영 분석 플랫폼</h3><p class="project-tagline">감시하는 시스템도 멈추지 않도록</p>
+                    <p class="project-desc"><strong>운영 데이터 수집 장애를 수정하고 배포 자동화에 기여했습니다.</strong> 메트릭·로그·이벤트를 모아 AI 분석과 알림으로 연결하는 팀 프로젝트입니다. 저는 수집과 배포 영역을 맡았습니다.</p>
                     <ul class="project-points">
-                        <li>Kubernetes API·Prometheus·Loki라는 성격이 다른 세 소스를 주기 수집하는 백엔드 모듈 구현 — 탐지 파이프라인의 입구 담당</li>
-                        <li>EKS 위에 ArgoCD GitOps와 SHA 태그 기반 CI/CD 구축 — 코드 푸시 한 번이 빌드·테스트·이미지 푸시·매니페스트 갱신·배포까지 사람 개입 없이 이어지도록 구성</li>
-                        <li>파드 크래시·노드 용량 한계를 로그와 이벤트로 원인 추적해 해결하며 실제 클러스터 운영 경험</li>
+                        <li><strong>데이터 연결.</strong> Kubernetes API와 Prometheus·Loki에서 운영 데이터를 수집해 분석 모듈로 전달하는 백엔드 작업에 참여했습니다.</li>
+                        <li><strong>수집 장애 수정.</strong> 스케줄러가 멈추는 문제에 대응해 Kubernetes 클라이언트를 수정했습니다. 실행 성능과 네임스페이스 범위 조회도 개선했습니다.</li>
+                        <li><strong>배포 추적.</strong> 커밋 SHA를 이미지 태그로 사용하고 인프라 저장소의 이미지 버전을 자동 갱신하는 흐름에 기여했습니다. Redis 실행 권한과 노드 구성도 수정했습니다.</li>
+                    </ul>
+                    <p class="project-note">AI 분석 모델과 프런트엔드는 팀의 다른 담당 영역입니다. 개인 기여는 백엔드와 인프라 저장소의 커밋에서 확인할 수 있습니다.</p>
+                </div>
+            </article>
+            <article id="p-fremen" class="project reveal">
+                <div class="project-meta">
+                    <span class="project-badge cap">캡스톤 · 3인 팀</span><p class="project-period">2025.09 – 2025.12</p><p class="project-role">백엔드 API·AI 서버 연동<br>API 명세·앱 연동</p>
+                    <div class="project-tags"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>JPA</span><span>WebClient</span></div><a href="https://github.com/CSID-DGU/2025-2-DES4015-Fremen-02" target="_blank" rel="noopener" class="project-link">GitHub 저장소 →</a>
+                </div>
+                <div class="project-body">
+                    <h3>Fremen 스미싱 탐지 서비스</h3><p class="project-tagline">문자 한 건이 분석 결과가 되기까지</p>
+                    <p class="project-desc"><strong>문자 분석 API와 AI 서버를 연결해 앱에 위험 등급을 반환했습니다.</strong> 문자 알림 수신부터 분석 결과 표시까지 이어지는 서비스를 만드는 것이 팀의 목표였습니다. 저는 백엔드와 API 명세를 담당했습니다.</p>
+                    <ul class="project-points">
+                        <li><strong>분석 흐름 구현.</strong> 기기·문자 정보를 저장하고 AI 분석을 요청했습니다. 반환된 점수를 위험 등급과 응답 형식으로 변환하고 오류 처리를 정리했습니다.</li>
+                        <li><strong>호출 전 필터.</strong> 5자 미만이면서 숫자와 URL이 없는 문자는 AI 호출을 생략하고 안전으로 처리하는 조건을 추가했습니다.</li>
+                        <li><strong>파트 간 연동.</strong> API 명세를 작성하고 앱 담당자와 연동했습니다. 팀 전체가 실제 데이터로 알림 수신부터 결과 표시까지 시험했으며 저는 최종 문서 초안도 맡았습니다.</li>
                     </ul>
                 </div>
             </article>
-
-            <article id="p-fremen" class="project reveal">
+            <article id="p-egg" class="project reveal">
                 <div class="project-meta">
-                    <span class="project-badge cap">캡스톤</span>
-                    <p class="project-period">2025.09 – 2025.12</p>
-                    <p class="project-role">지산학 캡스톤디자인2 · 3인 팀 · 백엔드</p>
-                    <div class="project-tags">
-                        <span>Spring Boot</span><span>Java 17</span><span>MySQL</span><span>JPA</span><span>WebClient</span><span>AWS EC2</span>
-                    </div>
-                    <a href="https://github.com/CSID-DGU/2025-2-DES4015-Fremen-02" target="_blank" rel="noopener" class="project-link">GitHub 저장소 →</a>
+                    <span class="project-badge team">부트캠프 · 5인 팀</span><p class="project-period">2026.08.12 – 2026.08.31</p><p class="project-role">CJ AI SW Wave · AI 파트 공동 담당<br>전처리·객체 탐지 모델 학습·평가</p>
+                    <div class="project-tags"><span>Python</span><span>YOLO</span><span>RT-DETR</span><span>Object Detection</span></div>
                 </div>
-
                 <div class="project-body">
-                    <h3>Fremen</h3>
-                    <p class="project-tagline">모든 요청을 AI에 태우지 않는 스미싱 탐지 백엔드</p>
-                    <p class="project-desc">문자를 룰 기반으로 1차 판별하고, 의심 건만 AI 서버로 넘겨 3단계 위험 등급과 근거 문장으로 돌려주는 Android 스미싱 탐지 서비스. 팀 프로젝트에서 <strong>백엔드</strong>를 담당했습니다.</p>
+                    <h3>Eggbenedet</h3><p class="project-tagline">탐지 점수와 처리 시간을 함께 보다</p>
+                    <p class="project-desc"><strong>계란 품질 검사 모델의 학습과 평가를 팀원과 함께 맡았습니다.</strong> 영상에서 품질 이상을 탐지하고 난각번호와 검사 결과를 연결해 Lot 추적을 지원하는 프로젝트입니다.</p>
                     <ul class="project-points">
-                        <li>모든 문자를 AI 서버로 보내면 비용과 지연이 감당되지 않는 문제 — 룰 기반 1차 필터로 안전한 문자는 AI 호출 없이 0.01초대에 판별하고, URL·숫자가 포함된 의심 문자만 넘기는 연동 계약 설계</li>
-                        <li>LLM 응답을 기다리는 동안 서버가 묶이는 지연을 WebClient 비동기 호출로 요청과 저장을 분리해 해결</li>
-                        <li>모바일 앱 연동 검증을 위해 AWS EC2 배포, 프론트·AI 파트와 API 명세를 먼저 합의하는 병렬 개발 방식 정착</li>
+                        <li><strong>AI 파트 수행.</strong> 일반 촬영과 투광 촬영 데이터를 활용한 전처리·객체 탐지 모델 학습·평가에 참여했습니다.</li>
+                        <li><strong>모델 비교.</strong> YOLO 계열과 RT-DETR의 탐지 성능 및 처리 시간을 비교했습니다. COLOR 평가에서 YOLO11m의 mAP50-95는 0.9553으로 기록됐습니다.</li>
+                        <li><strong>팀 결과.</strong> 검사 결과를 백엔드와 조회 화면으로 연결했습니다. 실제 공장 운영이 아닌 입력 상황을 모사한 환경에서 시험했습니다.</li>
                     </ul>
+                    <p class="project-note">모델 학습·평가는 AI 파트의 공동 작업입니다. Kafka 연동과 백엔드 처리 성능 개선은 팀의 다른 담당 영역입니다.</p>
                 </div>
             </article>
         </div>
     </section>
-
     <section id="skills" class="reveal">
         <div class="container">
-            <h2 class="section-title"><span class="section-index">03</span>기술 스택</h2>
+            <h2 class="section-title"><span class="section-index">03</span>사용 기술</h2><p class="section-lead">프로젝트에서 직접 사용한 기술과 적용 영역입니다.</p>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Language</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">Python</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Framework</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Spring Boot</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Data / Messaging</h3>
-                    <div class="skill-tags">
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">TimescaleDB</span>
-                        <span class="tag">PostGIS</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Redis</span>
-                        <span class="tag">Kafka</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>DevOps / Infra</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Docker</span>
-                        <span class="tag">Kubernetes</span>
-                        <span class="tag">AWS EKS</span>
-                        <span class="tag">GitHub Actions</span>
-                    </div>
-                </div>
+                <div class="skill-category"><h3>Backend</h3><div class="skill-tags"><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Spring Boot</span><span class="tag">FastAPI</span><span class="tag">JupyterHub</span></div><p class="skill-context">업무 API · AI 연동 · GPU 실습 제어</p></div>
+                <div class="skill-category"><h3>Data / Messaging</h3><div class="skill-tags"><span class="tag">PostgreSQL</span><span class="tag">TimescaleDB</span><span class="tag">PostGIS</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">Kafka</span></div><p class="skill-context">실습 원장 · 시계열 수집·저장</p></div>
+                <div class="skill-category"><h3>Infrastructure</h3><div class="skill-tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span><span class="tag">Argo CD</span><span class="tag">systemd</span></div><p class="skill-context">배포 자동화 · 서비스 실행·복구</p></div>
+                <div class="skill-category"><h3>Integration / AI</h3><div class="skill-tags"><span class="tag">WebSocket</span><span class="tag">VESSL</span><span class="tag">YOLO</span><span class="tag">RT-DETR</span></div><p class="skill-context">음성·GPU 서비스 연동 · 객체 탐지 평가</p></div>
             </div>
         </div>
     </section>
-
     <section id="activities" class="reveal">
         <div class="container">
             <h2 class="section-title"><span class="section-index">04</span>활동 &amp; 자격증</h2>
+            <div class="experience-note"><p class="project-tagline">오류를 다시 볼 수 있는 기록으로</p><h3>MonoGPT·MonoRouter QA</h3><p>모노플로우 인턴으로 제품 오류의 재현 조건과 증거를 정리했습니다. 화면 동작과 문서 추출 결과를 대조했고 API 요청·응답을 시험했습니다. 스트리밍 요청 취소 후 사용량 표시와 크레딧 차감이 다른 사례는 로그와 화면을 시간별로 맞춰 보고했습니다. 담당 범위는 시험·재현·보고입니다.</p></div>
             <div class="activities-layout">
-                <div>
-                    <h3 class="sub-title">활동</h3>
-                    <ul class="timeline">
-                        <li class="upcoming">
-                            <span class="timeline-period">2026.09 – 2026.12</span>
-                            <span class="timeline-name">모노플로우 인턴 <span class="chip-soon">예정</span></span>
-                        </li>
-                        <li>
-                            <span class="timeline-period">2026.06 – 2026.08</span>
-                            <span class="timeline-name">CJ AI SW WAVE 부트캠프</span>
-                        </li>
-                        <li>
-                            <span class="timeline-period">2025. 2학기</span>
-                            <span class="timeline-name">코딩테스트 스터디장</span>
-                        </li>
-                        <li>
-                            <span class="timeline-period">2024. 1학기</span>
-                            <span class="timeline-name">패러글라이딩 동아리</span>
-                        </li>
-                        <li>
-                            <span class="timeline-period">2023. 2학기</span>
-                            <span class="timeline-name">사진동아리</span>
-                        </li>
-                        <li>
-                            <span class="timeline-period">2021. 2학기</span>
-                            <span class="timeline-name">학생회 홍보국</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="sub-title">자격증</h3>
-                    <div class="cert-list">
-                        <div class="cert-card">
-                            <div class="cert-icon-box">SQL</div>
-                            <div class="cert-info">
-                                <div class="cert-top">
-                                    <span class="cert-name">SQLD</span>
-                                    <span class="cert-badge">취득</span>
-                                </div>
-                                <p class="cert-full">SQL 개발자</p>
-                                <p class="cert-meta">한국데이터산업진흥원 · 2025.09.19</p>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <div class="cert-icon-box">기사</div>
-                            <div class="cert-info">
-                                <div class="cert-top">
-                                    <span class="cert-name">정보처리기사</span>
-                                    <span class="cert-badge pending">취득 예정</span>
-                                </div>
-                                <p class="cert-full">Engineer Information Processing</p>
-                                <p class="cert-meta">한국산업인력공단 · 2026.09.11</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div><h3 class="sub-title">활동</h3><ul class="timeline">
+                    <li><span class="timeline-period">2026.09 – 현재</span><span class="timeline-name">모노플로우 인턴 <span class="cert-badge">재직 중</span></span><p class="timeline-detail">MonoLab · 안내 로봇 · 제품 QA · AI Festa 부스 응대</p></li>
+                    <li><span class="timeline-period">2026.06 – 2026.08</span><span class="timeline-name">CJ AI SW Wave 부트캠프</span><p class="timeline-detail">콜드체인 개인 프로젝트 · Eggbenedet 팀 프로젝트</p></li>
+                    <li><span class="timeline-period">2025. 2학기</span><span class="timeline-name">코딩테스트 스터디장</span></li>
+                    <li><span class="timeline-period">2024. 1학기</span><span class="timeline-name">패러글라이딩 동아리</span></li>
+                    <li><span class="timeline-period">2023. 2학기</span><span class="timeline-name">사진동아리</span></li>
+                    <li><span class="timeline-period">2021. 2학기</span><span class="timeline-name">학생회 홍보국</span></li>
+                </ul></div>
+                <div><h3 class="sub-title">자격증</h3><div class="cert-list">
+                    <div class="cert-card"><div class="cert-icon-box">기사</div><div class="cert-info"><div class="cert-top"><span class="cert-name">정보처리기사</span><span class="cert-badge">취득</span></div><p class="cert-full">Engineer Information Processing</p><p class="cert-meta">한국산업인력공단 · 2026.09.11</p></div></div>
+                    <div class="cert-card"><div class="cert-icon-box">SQL</div><div class="cert-info"><div class="cert-top"><span class="cert-name">SQLD</span><span class="cert-badge">취득</span></div><p class="cert-full">SQL 개발자</p><p class="cert-meta">한국데이터산업진흥원 · 2025.09.19</p></div></div>
+                </div></div>
             </div>
         </div>
     </section>
-
-    <section id="contact" class="reveal">
-        <div class="container">
-            <h2 class="section-title"><span class="section-index">05</span>연락처</h2>
-            <div class="contact-card">
-                <p class="contact-lead">함께 만들 것이 있다면 편하게 연락 주세요.</p>
-                <div class="contact-links">
-                    <a href="mailto:ych758@naver.com" class="contact-item">
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">ych758@naver.com</span>
-                    </a>
-                    <a href="https://github.com/younchanhyeok" target="_blank" rel="noopener" class="contact-item">
-                        <span class="contact-label">GitHub</span>
-                        <span class="contact-value">github.com/younchanhyeok</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="contact" class="reveal"><div class="container">
+        <h2 class="section-title"><span class="section-index">05</span>연락처</h2><div class="contact-card"><p class="contact-lead">프로젝트와 경험에 대해 더 이야기하고 싶습니다.</p><div class="contact-links">
+            <a href="mailto:ych758@naver.com" class="contact-item"><span class="contact-label">Email</span><span class="contact-value">ych758@naver.com</span></a><a href="https://github.com/younchanhyeok" target="_blank" rel="noopener" class="contact-item"><span class="contact-label">GitHub</span><span class="contact-value">github.com/younchanhyeok</span></a>
+        </div></div>
+    </div></section>
     </main>
-
-    <footer>
-        <p>© 2026 윤찬혁</p>
-    </footer>
-
+    <footer><p>© 2026 윤찬혁 · 업데이트 2026.10.20</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
