@@ -29,7 +29,7 @@
             <h1>윤찬혁</h1>
             <p class="hero-subtitle">사용자의 일을 이해하고,<br><span class="highlight">실제로 쓰이는 소프트웨어를 만드는 SW 엔지니어입니다.</span></p>
             <div class="hero-stats">
-                <div class="stat"><span class="stat-label">주력 프로젝트</span><span class="stat-value"><em>MonoLab</em></span><span class="stat-note">GPU 실습 플랫폼 · 개발·검증 중 / 납품 예정</span></div>
+                <div class="stat"><span class="stat-label">주력 프로젝트</span><span class="stat-value"><em>MonoLab</em></span><span class="stat-note">GPU 실습 플랫폼 · 기능 개발 완료</span></div>
                 <div class="stat"><span class="stat-label">대시보드 조회 p50</span><span class="stat-value"><s>22.7s</s><i>→</i><em>412ms</em></span><span class="stat-note">콜드체인 · 가상 장비 5,000대 부하 시험</span></div>
                 <div class="stat"><span class="stat-label">구현에서 현장까지</span><span class="stat-value"><em>AI Festa</em></span><span class="stat-note">부스 안내 로봇 개발·운영 · 2026.10</span></div>
             </div>
@@ -43,7 +43,7 @@
             <div class="about-grid">
                 <div class="about-content">
                     <p><strong>백엔드 개발을 바탕으로 AI 연동과 검증·운영까지 경험했습니다.</strong> Java·Spring Boot와 Python으로 API와 데이터 처리 기능을 개발하며 실제 사용 조건에서 동작을 확인해 왔습니다.</p>
-                    <p>현재 모노플로우 인턴으로 GPU 실습 플랫폼 MonoLab을 개발하고 있습니다. 학생·교사·운영자의 사용 흐름에 맞춰 권한과 실습 시간 정산을 구현했습니다. 실제 GPU에서 종료와 파일 보존까지 검증하며 납품을 준비하고 있습니다.</p>
+                    <p>모노플로우 인턴으로 학교·기관용 GPU 실습 플랫폼 MonoLab을 개발했습니다. 계정과 GPU 환경 준비부터 실습 제어·시간 정산·비용 보고까지 연결했습니다. 실제 A100에서 주요 사용 흐름을 검증했으며 현재 시연과 배포를 준비하고 있습니다.</p>
                     <p>콜드체인에서는 부하 시험으로 조회 지연을 줄였고, 안내 로봇은 음성 AI를 연결해 AI Festa에서 운영했습니다. 제품 QA로 오류를 개선하고 현장에서 고객의 질문에 답하며 개발한 기능이 어떻게 쓰이는지도 살폈습니다.</p>
                 </div>
                 <aside class="about-facts" aria-label="기본 정보">
@@ -60,20 +60,21 @@
             <h2 class="section-title reveal"><span class="section-index">02</span>프로젝트</h2>
             <article id="p-monolab" class="project featured reveal">
                 <div class="project-meta">
-                    <span class="project-badge personal">주력 · 인턴 프로젝트</span><p class="project-period">2026.10 – 진행 중</p><p class="project-role">모노플로우 · 구현·검증<br>납품 및 회사 망 서버 배포 예정</p>
+                    <span class="project-badge personal">주력 · 인턴 프로젝트</span><p class="project-period">2026.10 · 기능 개발 완료</p><p class="project-role">모노플로우 · 구현·검증<br>시연·배포 준비</p>
                     <div class="project-tags"><span>Python</span><span>JupyterHub</span><span>JupyterLab</span><span>PostgreSQL</span><span>GPU</span></div>
                 </div>
                 <div class="project-body">
-                    <h3>MonoLab</h3><p class="project-tagline">실습 종료 버튼 너머, 정산까지</p>
-                    <p class="project-desc"><strong>GPU 실습의 시작·종료·정산을 연결하고 실제 A100에서 검증했습니다.</strong> 학교·기관의 학생과 교사가 사용하도록 개발 중인 실습 플랫폼입니다. 역할별 권한과 실습 시간 관리부터 GPU 자원 회수까지 구현했습니다.</p>
-                    <ol class="system-flow" aria-label="MonoLab 실습 처리 흐름"><li><span>01</span>시간 확보</li><li><span>02</span>실습 준비</li><li><span>03</span>사용·종료</li><li><span>04</span>종료 확인·정산</li></ol>
+                    <h3>MonoLab</h3><p class="project-tagline">실습을 여는 순간부터, 운영자가 확인할 비용까지</p>
+                    <p class="project-desc"><strong>학교·기관의 GPU 실습 운영을 하나의 플랫폼으로 연결했습니다.</strong> 운영자는 계정과 GPU 환경을 준비하고 교사는 담당 수업을 관리합니다. 학생과 교사는 브라우저에서 실습하며 종료 후에도 파일을 이어서 사용할 수 있습니다. 사용 시간 정산과 내부 비용 보고까지 구현하고 실제 A100으로 검증했습니다.</p>
+                    <ol class="system-flow" aria-label="MonoLab 실습 운영 흐름"><li><span>01</span>계정·자원 준비</li><li><span>02</span>실습·작업 감시</li><li><span>03</span>종료·시간 정산</li><li><span>04</span>사용량·비용 보고</li></ol>
                     <ul class="project-points">
-                        <li><strong>사용 규칙 구현.</strong> 학생·교사·관리자의 접근 범위를 나눴습니다. 실습 전 선택 시간을 확보하고 실행 기록과 정산 기준을 함께 저장했습니다.</li>
-                        <li><strong>종료와 정산 분리.</strong> Lab 접속 준비가 끝난 뒤 사용 시간을 계산합니다. 공급자의 GPU와 Notebook 종료를 확인한 뒤 정산을 확정하고 미사용 시간을 반환하도록 구성했습니다. 중복 정산도 방지했습니다.</li>
-                        <li><strong>장애 대응.</strong> Hub와 별도로 동작하는 감시 프로세스로 GPU 회수를 처리했습니다. 사용 시간을 확정하기 어려운 장애 건은 운영자가 기록을 남겨 정산하도록 했습니다.</li>
-                        <li><strong>실환경 검증.</strong> 실제 A100의 CUDA 연산과 두 학생의 별도 GPU 동시 실습을 확인했습니다. 파일 보존과 로그아웃을 시험했고 시간 만료·30분 미사용 종료·원장 분리도 확인했습니다.</li>
+                        <li><strong>실습 준비를 관리자 화면으로.</strong> 계정 발급부터 전용 GPU·영구 볼륨 생성, SSH 확인과 환경 설치, 시간 배정까지 연결했습니다. 기관·수업별 권한을 구분하고 교사의 개인 실습과 계정 복구도 지원합니다.</li>
+                        <li><strong>실제로 쓴 시간만 차감.</strong> Lab 준비 완료부터 종료 요청까지 사용 시간을 계산합니다. GPU와 Notebook의 중지를 확인한 뒤 미사용 시간을 반환하며 중복 정산을 막았습니다. 준비와 종료 대기는 사용자 차감에서 제외합니다.</li>
+                        <li><strong>작업은 보호하고 유휴 자원은 회수.</strong> 셀·터미널 작업을 감시해 출력 없는 연산은 유지하고 30분 미사용 시 종료합니다. Hub 중단 시에는 별도 감시 프로세스가 GPU를 회수하며 불명확한 사용량은 근거를 남겨 보정합니다.</li>
+                        <li><strong>파일 정리부터 비용 확인까지.</strong> 저장공간 초과 시 실행을 제한하되 파일 저장·다운로드·삭제는 유지하는 정리 모드를 구현했습니다. 운영자는 기관·수업별 사용량과 준비·실습·종료 비용을 원본과 대조하고 CSV·XLSX로 확인할 수 있습니다.</li>
+                        <li><strong>실제 GPU와 장애 상황 검증.</strong> A100의 CUDA 연산, 두 학생의 동시 실습과 원장 분리, 종료 후 파일 보존을 확인했습니다. 시간 만료·실제 30분 미사용 종료와 Hub 중단 복구를 시험했고 로컬 HTTPS 사용자 격리·DB 장애 복구도 검증했습니다.</li>
                     </ul>
-                    <p class="project-note"><strong>진행 상태</strong> 납품을 위한 개발·검증 중입니다. 시연 승인 후 회사 망 서버에 배포하고 직접 SSH로 유지보수할 예정입니다.</p>
+                    <p class="project-note"><strong>진행 상태</strong> 기능 개발을 완료하고 시연·배포를 준비하고 있습니다. 시연 승인 후 회사 망의 Ubuntu 서버로 이전하고 직접 SSH로 유지보수할 예정입니다.</p>
                 </div>
             </article>
             <article id="p-coldchain" class="project reveal">
