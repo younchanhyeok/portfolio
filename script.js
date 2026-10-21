@@ -36,22 +36,37 @@ const navObserver = new IntersectionObserver(entries => {
     });
 
     const current = watched.find(s => visible.has(s.id));
-    navLinks.forEach(a => a.classList.remove('is-active'));
-    if (current) linkById.get(current.id).classList.add('is-active');
+    navLinks.forEach(a => {
+        a.classList.remove('is-active');
+        a.removeAttribute('aria-current');
+    });
+    if (current) {
+        const activeLink = linkById.get(current.id);
+        activeLink.classList.add('is-active');
+        activeLink.setAttribute('aria-current', 'location');
+    }
 }, { rootMargin: '-45% 0px -50% 0px' });
 
 watched.forEach(s => navObserver.observe(s));
 
 /* 해시로 이동한 대상은 페이드인을 기다리지 않고 즉시 노출 */
+function getHashTarget(hash) {
+    if (!hash || hash === '#') return null;
+    try {
+        return document.getElementById(decodeURIComponent(hash.slice(1)));
+    } catch {
+        return null;
+    }
+}
+
 function revealHashTarget() {
-    if (!location.hash) return;
-    const target = document.querySelector(location.hash);
+    const target = getHashTarget(location.hash);
     if (target) target.classList.add('visible');
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', () => {
-        const target = document.querySelector(a.getAttribute('href'));
+        const target = getHashTarget(a.getAttribute('href'));
         if (target) target.classList.add('visible');
     });
 });
@@ -65,6 +80,7 @@ const revealTargets = document.querySelectorAll('.reveal');
 if (prefersReducedMotion) {
     revealTargets.forEach(el => el.classList.add('visible'));
 } else {
+    document.documentElement.classList.add('js');
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(e => {
             if (!e.isIntersecting) return;
